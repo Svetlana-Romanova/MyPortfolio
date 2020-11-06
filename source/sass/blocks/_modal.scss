@@ -54,6 +54,10 @@
 .modal__body {
   font-size: 17px;
   padding: 20px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 15px;
+  }
 }
 
 .modal__list {

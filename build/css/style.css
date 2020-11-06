@@ -425,6 +425,9 @@ ul {
 .modal__body {
   font-size: 17px;
   padding: 20px; }
+  @media (max-width: 767px) {
+    .modal__body {
+      font-size: 15px; } }
 
 .modal__list {
   padding-bottom: 10px;
@@ -499,10 +502,11 @@ ul {
   font-weight: bold; }
 
 .about {
-  padding: 40px 0; }
+  padding: 20px 0; }
 
-.about__block {
-  max-height: 400px; }
+.about__photo {
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .about__img {
   -o-object-fit: cover;
@@ -514,7 +518,12 @@ ul {
 .about__descr {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media (max-width: 576px) {
+    .about__descr {
+      text-align: center; } }
 
 .about__header {
   font-size: 26px;
@@ -524,9 +533,12 @@ ul {
 .about__info {
   font-size: 20px;
   color: #565656; }
+  @media (max-width: 767px) {
+    .about__info {
+      font-size: 15px; } }
 
 .portfolio {
-  padding: 40px 0; }
+  padding: 20px 0; }
 
 .portfolio__header {
   text-align: center;

@@ -1,9 +1,10 @@
 .about {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
-.about__block {
-  max-height: 400px;
+.about__photo {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .about__img {
@@ -16,7 +17,13 @@
 .about__descr {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (max-width: $very-sm-width) {
+    text-align: center;
+  }
 }
 
 .about__header {
@@ -28,4 +35,8 @@
 .about__info {
   font-size: 20px;
   color: $descr-text-color;
+
+  @media (max-width: $mobile-width) {
+    font-size: 15px;
+  }
 }
