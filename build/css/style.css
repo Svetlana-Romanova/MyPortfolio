@@ -327,6 +327,20 @@ template {
   display: none; }
 
 /* stylelint-enable */
+html {
+  overflow: scroll;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 0;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000; }
+
 body {
   font-size: 14px;
   color: #1c3135;
@@ -367,6 +381,7 @@ ul {
   background-color: rgba(0, 0, 0, 0.56); }
 
 .btn {
+  display: block;
   min-width: 110px;
   margin-top: 20px;
   background-color: #ce926c;
@@ -376,6 +391,9 @@ ul {
     background-color: #c7bf9d; }
   .btn:active {
     opacity: 0.5; }
+  @media (max-width: 576px) {
+    .btn {
+      margin: 10px auto; } }
 
 .modal {
   max-width: 80vw;
@@ -386,6 +404,9 @@ ul {
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   background-color: white; }
+  @media (max-width: 576px) {
+    .modal {
+      max-width: 90vw; } }
 
 .is-modal-open {
   overflow: hidden; }
@@ -398,6 +419,9 @@ ul {
   max-height: 80vh;
   overflow-y: auto;
   border: 1px solid #818a48; }
+  @media (max-width: 576px) {
+    .modal__inner {
+      margin: 10px; } }
 
 .modal__header {
   text-align: center;
@@ -427,7 +451,8 @@ ul {
   padding: 20px; }
   @media (max-width: 767px) {
     .modal__body {
-      font-size: 15px; } }
+      font-size: 15px;
+      padding: 0; } }
 
 .modal__list {
   padding-bottom: 10px;
@@ -464,6 +489,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media (max-width: 576px) {
+    .main-header__promo {
+      min-height: auto; } }
 
 .main-header__left {
   height: 70vh;

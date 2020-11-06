@@ -1,4 +1,5 @@
 .btn {
+  display: block;
   min-width: 110px;
   margin-top: 20px;
   background-color: $second-button-color;
@@ -12,5 +13,9 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (max-width: $very-sm-width) {
+    margin: 10px auto;
   }
 }

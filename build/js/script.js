@@ -99,28 +99,33 @@ __webpack_require__.r(__webpack_exports__);
 function getModal() {
   let body = document.querySelector('body');
   let wrapper = document.querySelector('.wrapper__modal');
-  let modal = document.querySelector('.modal');
+  let modal = document.querySelector('.modal__inner');
   let modalClose = document.querySelector('.modal__close');
   let btns = document.querySelectorAll('.btn');
-  let aboutMore = document.querySelector('[data-id="btn-about"]');
+  let btnMore = document.querySelector('[data-id="btn-about"]');
+  let btnClose = document.querySelector('[data-id="btn-close"]');
+  let toggleMain = document.querySelector('.main-nav__toggle');
 
   function open() {
+    modal.scrollTo(0, 0);
     wrapper.classList.remove('visually-hidden');
     wrapper.classList.add('overlay');
     body.classList.add('is-modal-open');
-    return modal;
+    toggleMain.style.display = 'none';
   }
 
   function close() {
     wrapper.classList.add('visually-hidden');
     wrapper.classList.remove('overlay');
     body.classList.remove('is-modal-open');
+    toggleMain.style.display = '';
   }
 
-  aboutMore.addEventListener('click', () => {
+  btnMore.addEventListener('click', () => {
     open();
   });
   modalClose.addEventListener('click', () => close());
+  btnClose.addEventListener('click', () => close());
   body.addEventListener('keydown', function (event) {
     if (event.code === 'Escape') {
       close();
@@ -154,16 +159,25 @@ function getToggle() {
       nav = document.querySelector('.main-nav'),
       body = document.querySelector('body');
 
-  function changeMenu() {
-    toggleMain.classList.toggle('active');
-    navList.classList.toggle('d-none');
+  function openMenu() {
+    toggleMain.classList.add('active');
+    nav.classList.add('main-nav--adaptive');
+    body.classList.add('is-modal-open');
+    navList.classList.remove('d-none');
+  }
 
+  function closeMenu() {
+    toggleMain.classList.remove('active');
+    nav.classList.remove('main-nav--adaptive');
+    body.classList.remove('is-modal-open');
+    navList.classList.add('d-none');
+  }
+
+  function changeMenu() {
     if (toggleMain.classList.contains('active')) {
-      nav.classList.add('main-nav--adaptive');
-      body.classList.add('is-modal-open');
+      closeMenu();
     } else {
-      nav.classList.remove('main-nav--adaptive');
-      body.classList.remove('is-modal-open');
+      openMenu();
     }
   }
 
@@ -172,7 +186,7 @@ function getToggle() {
   });
   body.addEventListener('keydown', function (event) {
     if (event.code === 'Escape') {
-      changeMenu();
+      closeMenu();
     }
   });
   body.addEventListener('click', e => {

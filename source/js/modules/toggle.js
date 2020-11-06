@@ -5,17 +5,25 @@ export default function getToggle() {
       nav = document.querySelector('.main-nav'),
       body = document.querySelector('body');
 
+  function openMenu() {
+    toggleMain.classList.add('active');
+    nav.classList.add('main-nav--adaptive');
+    body.classList.add('is-modal-open');
+    navList.classList.remove('d-none');
+  }
+
+  function closeMenu() {
+    toggleMain.classList.remove('active');
+    nav.classList.remove('main-nav--adaptive');
+    body.classList.remove('is-modal-open');
+    navList.classList.add('d-none');
+  }
+
   function changeMenu() {
-    toggleMain.classList.toggle('active');
-    navList.classList.toggle('d-none');
-
     if (toggleMain.classList.contains('active')) {
-      nav.classList.add('main-nav--adaptive');
-      body.classList.add('is-modal-open');
-
+      closeMenu();
     } else {
-      nav.classList.remove('main-nav--adaptive');
-      body.classList.remove('is-modal-open');
+      openMenu();
     }
   }
 
@@ -25,7 +33,7 @@ export default function getToggle() {
 
   body.addEventListener('keydown', function (event) {
     if (event.code === 'Escape') {
-      changeMenu();
+      closeMenu();
     }
   });
 
@@ -34,5 +42,4 @@ export default function getToggle() {
       changeMenu();
     };
   });
-
 }
