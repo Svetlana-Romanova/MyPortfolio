@@ -1,0 +1,66 @@
+.main-header {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $basic-background-color;
+}
+
+.main-header__nav {
+  padding: 20px;
+  align-items: center;
+}
+
+.main-header__logo {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+.main-header__promo {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header__left {
+  height: 70vh;
+  width: 30vw;
+  border: 10px solid $border-background-color;
+  opacity: 0.8;
+}
+
+.main-header__right {
+  background: linear-gradient(to right, $basic-background-color 20%, transparent 90%), url("../img/bg-comp.png") no-repeat top center;
+  background-size: cover;
+  width: 40vw;
+  opacity: 0.7;
+  min-height: 100vh;
+}
+
+.main-header__descr {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-header__me {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.main-header__surname {
+  color: $third-text-color;
+  padding: 10px;
+}
+
+.main-header__post {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  font-size: 28px;
+  font-weight: bold;
+}

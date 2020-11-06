@@ -1,0 +1,16 @@
+.btn {
+  min-width: 110px;
+  margin-top: 20px;
+  background-color: $second-button-color;
+  text-align: center;
+  font-size: 14px;
+
+  &:hover,
+  &:focus {
+    background-color: #c7bf9d;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

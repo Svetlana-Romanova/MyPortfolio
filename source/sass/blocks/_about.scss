@@ -1,0 +1,31 @@
+.about {
+  padding: 40px 0;
+}
+
+.about__block {
+  max-height: 400px;
+}
+
+.about__img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  box-shadow: 10px 10px $first-shadow-color;
+}
+
+.about__descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about__header {
+  font-size: 26px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.about__info {
+  font-size: 20px;
+  color: $descr-text-color;
+}

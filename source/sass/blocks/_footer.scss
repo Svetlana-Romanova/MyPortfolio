@@ -1,0 +1,41 @@
+.footer {
+  min-height: 100px;
+  background-color: $footer-background-color;
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 15px;
+  color: $basic-text-color;
+}
+
+.footer__contacts {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer__email {
+  position: relative;
+  color: $basic-text-color;
+  line-height: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -40px;
+    background: url("../img/icon-mail.svg") top left no-repeat;
+    width: 32px;
+    height: 32px;
+
+    @media (max-width: $very-sm-width) {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $hover-text-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}

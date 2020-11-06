@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "OpenSans";
+  src:
+    url("../fonts/opensans-regular.woff2") format("woff2"),
+    url("../fonts/opensans-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VegurRegular";
+  src:
+    url("../fonts/vegur-regular.woff2") format("woff2"),
+    url("../fonts/vegur-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VegurBold";
+  src:
+    url("../fonts/vegur-regular.woff2") format("woff2"),
+    url("../fonts/vegur-regular.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

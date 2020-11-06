@@ -1,0 +1,11 @@
+.highlight {
+  &--green {
+    padding: 0 5px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    color: $second-text-color;
+  }
+
+  &--red {
+    color: $highlight-text-color;
+  }
+}
