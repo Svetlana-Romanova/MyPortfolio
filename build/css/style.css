@@ -371,7 +371,7 @@ ul {
   margin-top: 20px;
   background-color: #ce926c;
   text-align: center;
-  font-size: 14px; }
+  font-size: 16px; }
   .btn:hover, .btn:focus {
     background-color: #c7bf9d; }
   .btn:active {
@@ -423,7 +423,7 @@ ul {
   color: #ce926c; }
 
 .modal__body {
-  font-size: 15px;
+  font-size: 17px;
   padding: 20px; }
 
 .modal__list {
@@ -567,7 +567,8 @@ ul {
   position: absolute;
   background-color: #f8f3db;
   opacity: 0.6;
-  text-align: center; }
+  text-align: center;
+  font-size: 16px; }
 
 .main-nav {
   display: flex;
