@@ -391,6 +391,8 @@ ul {
     background-color: #c7bf9d; }
   .btn:active {
     opacity: 0.5; }
+  .btn--modal {
+    margin: 0 auto; }
   @media (max-width: 576px) {
     .btn {
       margin: 10px auto; } }
