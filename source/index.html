@@ -57,10 +57,10 @@
         <section class="about" id="about-me">
           <h2 class="visually-hidden">About</h2>
           <div class="row about__block">
-            <div class="col-12 col-sm-6 about__photo">
+            <div class="col-8 col-sm-6 about__photo">
               <picture>
-                <source type="image/webp" srcset="img/photo-me.webp 1x, img/photo-me.webp 2x">
-                <img class="about__img" src="img/photo-me.jpg" width="616" height="396" srcset="img/photo-me.jpg 2x" alt="My photo">
+                <!-- <source type="image/webp" srcset="img/IMG_7068.webp 1x, img/IMG_7068.webp 2x"> -->
+                <img class="about__img" src="img/IMG_7068.jpg" width="616" height="396" srcset="img/IMG_7068.jpg" alt="My photo">
               </picture>
             </div>
             <div class="col-12 col-sm-6 about__descr">
@@ -80,6 +80,15 @@
           <div class="portfolio__header">Портфолио</div>
           <div class="portfolio__subheader">Мои работы</div>
           <div class="row portfolio__block">
+            <div class="col-12 col-sm-6 portfolio__item">
+              <a href="https://Svetlana-Romanova.github.io/find-cats/build" class="portfolio__photo" target="_blank">
+                <picture>
+                  <source type="image/webp" srcset="img/photo-notepad@1x.webp 1x, img/photo-notepad@2x.webp 2x">
+                  <img class="portfolio__img" src="img/photo-notepad@1x.jpg" width="570" height="165" srcset="img/photo-notepad@2x.jpg 2x" alt="Photo with notepad">
+                </picture>
+              </a>
+              <div class="portfolio__descr">Interactive adaptive site</div>
+            </div>
             <div class="col-12 col-sm-6 portfolio__item">
               <a href="https://svetlana-romanova.github.io/serviceSite/build/" class="portfolio__photo" target="_blank">
                 <picture>
@@ -107,15 +116,6 @@
               </a>
               <div class="portfolio__descr">Promo-block: HTML / SASS / JAVASCRIPT / BEM / Flexbox</div>
             </div>
-            <div class="col-12 col-sm-6 portfolio__item">
-              <a href="https://svetlana-romanova.github.io/native-js-data/" class="portfolio__photo" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="img/photo-notepad@1x.webp 1x, img/photo-notepad@2x.webp 2x">
-                  <img class="portfolio__img" src="img/photo-notepad@1x.jpg" width="570" height="165" srcset="img/photo-notepad@2x.jpg 2x" alt="Photo with notepad">
-                </picture>
-              </a>
-              <div class="portfolio__descr">Create table by native JS with data.<br>IN PROGRESS...</div>
-            </div>
           </div>
         </section>
       </div>
@@ -132,32 +132,52 @@
       <div class="modal">
         <div class="modal__inner">
           <div class="modal__header">
-              <h5 class="modal__title">Обо мне</h5>
-              <button type="button" class="modal__close">
-                  <span>&times;</span>
-              </button>
+            <h5 class="modal__title">Обо мне</h5>
+            <button type="button" class="modal__close">
+                <span>&times;</span>
+            </button>
           </div>
-          <div class="modal__body">
-            <p>Привет, меня зовут Светлана Романова. Мне 31 год, живу в Москве, разрабатываю фронтенд, чему-то только учусь.
-            </p>
-            <p>То, что применяю:</p>
-            <p class="highlight highlight--red">технологии и инструменты</p>
-            <ul class="modal__list">
-              <li>Отличные знания<span class="highlight highlight--green">HTML5, CSS3,</span> верстаю адаптивные сайты;</li>
-              <li>Средний уровень <span class="highlight highlight--green">Javascript</span>;</li>
-              <li>Хороший опыт работы с препроцессором <span class="highlight highlight--green">SCSS</span>;</li>
-              <li>Для сборки верстки использую <span class="highlight highlight--green">Gulp</span>;</li>
-              <li>Осваивать <span class="highlight highlight--green">Webpack</span> только начала;</li>
-              <li>Есть знания <span class="highlight highlight--green">jQuery</span>, но Native JS пока в приоритете;</li>
-              <li>Что еще: <span class="highlight highlight--green">Git, Bootstrap4, БЭМ, Adobe Photoshop</span> и <span class="highlight highlight--green">Figma</span>(на уровне нарезки макета);</li>
-              <li>В планах начать изучение <span class="highlight highlight--green">React</span></li>
-            </ul>
-            <p>Во многом разбираюсь сама, иногда требуется помощь коллег. В коде люблю чистоту, доступность, называю функции и классы понятными не только для себя именами. Всегда в поиске самых адекватных путей в решении поставленных задач.<br><br>
-              Хочу активно развиваться в данной сфере и быть частью компании с современным стеком технологий.</p>
+          <div class="row modal__body">
+            <div class="col-4">
+              <img class="modal__photo" src="img/IMG_7011.jpg" width="570" height="165" alt="Photo with me">
+            </div>
+            <div class="col-8">
+              Привет, меня зовут Светлана Романова. Мне 31 год, живу в Москве, разрабатываю фронтенд, чему-то только учусь.
+              <p>То, что применяю:</p>
+              <p class="highlight highlight--red">технологии и инструменты</p>
+              <ul class="modal__list">
+                <li>
+                  Отличные знания<span class="highlight highlight--green">HTML5, CSS3,</span> верстаю адаптивные сайты;
+                </li>
+                <li>
+                  Средний уровень <span class="highlight highlight--green">Javascript</span>;
+                </li>
+                <li>
+                  Хороший опыт работы с препроцессором <span class="highlight highlight--green">SCSS</span>;
+                </li>
+                <li>
+                  Для сборки верстки использую <span class="highlight highlight--green">Gulp</span>;
+                </li>
+                <li>
+                  Осваивать <span class="highlight highlight--green">Webpack</span> только начала;
+                </li>
+                <li>
+                  Есть знания <span class="highlight highlight--green">jQuery</span>, но Native JS пока в приоритете;
+                </li>
+                <li>
+                  Что еще: <span class="highlight highlight--green">Git, Bootstrap4, БЭМ, Adobe Photoshop</span> и <span class="highlight highlight--green">Figma</span>(на уровне нарезки макета);
+                </li>
+                <li>
+                  В планах начать изучение <span class="highlight highlight--green">React</span>
+                </li>
+              </ul>
+              <p>Во многом разбираюсь сама, иногда требуется помощь коллег. В коде люблю чистоту, доступность, называю функции и классы понятными не только для себя именами. Всегда в поиске самых адекватных путей в решении поставленных задач.<br><br>
+                Хочу активно развиваться в данной сфере и быть частью компании с современным стеком технологий.</p>
 
-              <p><span class="highlight highlight--red">Просто про меня:</span><br>
-                Люблю гулять, общаться, спорт(много чего пробовала, много чего нравится). Вдумчива, умею доходчиво объяснять и быть терпеливой.
-              </p>
+                <p><span class="highlight highlight--red">Просто про меня:</span><br>
+                  Люблю гулять, общаться, спорт(много чего пробовала, много чего нравится). Вдумчива, умею доходчиво объяснять и быть терпеливой.
+                </p>
+            </div>
           </div>
           <button class="btn" data-id="btn-close" type="button">Закрыть</button>
         </div>

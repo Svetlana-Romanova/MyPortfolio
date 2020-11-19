@@ -446,9 +446,15 @@ ul {
   text-transform: capitalize;
   color: #ce926c; }
 
+.modal__photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto; }
+
 .modal__body {
   font-size: 17px;
-  padding: 20px; }
+  width: 100%; }
   @media (max-width: 767px) {
     .modal__body {
       font-size: 15px;
@@ -532,6 +538,9 @@ ul {
 .about {
   padding: 20px 0; }
 
+.about__block {
+  justify-content: center; }
+
 .about__photo {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -539,7 +548,7 @@ ul {
 .about__img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+  width: 80%;
   height: auto;
   box-shadow: 10px 10px #8a9877; }
 

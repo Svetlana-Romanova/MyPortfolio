@@ -2,6 +2,10 @@
   padding: 20px 0;
 }
 
+.about__block {
+  justify-content: center;
+}
+
 .about__photo {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -9,7 +13,7 @@
 
 .about__img {
   object-fit: cover;
-  width: 100%;
+  width: 80%;
   height: auto;
   box-shadow: 10px 10px $first-shadow-color;
 }
